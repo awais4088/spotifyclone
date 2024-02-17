@@ -1,0 +1,84 @@
+.black-border {
+  /* border: 2px solid black; */
+  margin: 3px;
+  border-radius: 10px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* For Webkit based browsers (e.g. Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333; /* Darker color for the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+  border: 3px solid #555; /* Add a border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #222; /* Darker color on hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #111; /* Darker color for the scrollbar track */
+}
+
+/* For Firefox */
+html {
+  scrollbar-color: #333 #111; /* Darker colors for the scrollbar thumb and track respectively */
+}
+
+/* css for the input range tag */
+/* Base styles for the range input */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  background: transparent;
+  outline: none;
+}
+
+/* Track */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: #444; /* dark gray */
+}
+
+/* Thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid #fff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin-top: -6px; /* Center the thumb vertically */
+}
+
+/* Active Thumb */
+input[type="range"]:active::-webkit-slider-thumb {
+  border-color: #ccc; /* light gray */
+}
+
+/* Focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* Value */
+input[type="range"]::-webkit-slider-thumb::after {
+  content: attr(value);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 12px;
+}
